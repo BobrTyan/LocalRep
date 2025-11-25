@@ -13,6 +13,7 @@ namespace LocalRep
     public partial class Form2 : Form
     {
         Student s = new Student();
+        int ball;
         public Form2(Student student)
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace LocalRep
             if (radioButton3.Checked == true) s.ball = 1;
             Form3 f = new Form3(s);
             f.ShowDialog();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true) { ball++;}
         }
     }
 }
