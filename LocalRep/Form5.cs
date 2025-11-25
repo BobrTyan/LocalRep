@@ -12,9 +12,17 @@ namespace LocalRep
 {
     public partial class Form5 : Form
     {
-        public Form5()
+        Student s = new Student();
+        public Form5(Student student)
         {
             InitializeComponent();
+            this.s = student;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
