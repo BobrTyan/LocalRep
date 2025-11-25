@@ -19,17 +19,14 @@ namespace LocalRep
             InitializeComponent();
             this.s = student;
         }
-        public void proverka()
-        {
-            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox1.Checked == false)
-            { s.ball = s.ball + 0; }
-            if ((checkBox1.Checked == true && checkBox2.Checked == false && checkBox1.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox1.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == false && checkBox1.Checked == true)) { s.ball++; }
-            else if ((checkBox1.Checked == true && checkBox2.Checked == true && checkBox1.Checked == false) || (checkBox1.Checked == true && checkBox2.Checked == false && checkBox1.Checked == true) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox1.Checked == true)) { s.ball = s.ball + 2; }
-            else if (checkBox1.Checked == true && checkBox2.Checked == true && checkBox1.Checked == true) { s.ball = s.ball + 3; }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox1.Checked == false)
+            { s.ball = s.ball + 0; }
+            if ((checkBox1.Checked == true && checkBox2.Checked == false && checkBox1.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox1.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == false && checkBox1.Checked == true)) { s.ball = s.ball + 1; }
+            else if ((checkBox1.Checked == true && checkBox2.Checked == true && checkBox1.Checked == false) || (checkBox1.Checked == true && checkBox2.Checked == false && checkBox1.Checked == true) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox1.Checked == true)) { s.ball = s.ball + 2; }
+            else /*if (checkBox1.Checked == true && checkBox2.Checked == true && checkBox1.Checked == true)*/ { s.ball = s.ball + 3; }
             Form4 f = new Form4(s);
             f.ShowDialog();
 
