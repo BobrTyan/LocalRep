@@ -16,5 +16,15 @@ namespace LocalRep
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Student student = new Student();
+            student.name = textBox1.Text;
+            student.ball = 0;
+            student.day = DateTime.Today;//текущая дата
+            Form2 f = new Form2(student);
+            f.ShowDialog();
+        }
     }
 }
