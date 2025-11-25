@@ -11,19 +11,26 @@ using System.Windows.Forms;
 namespace LocalRep
 {
     public partial class Form1 : Form
-    {
+    { Student student = new Student();
         public Form1()
         {
+           
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
+           
             student.name = textBox1.Text;
             student.ball = 0;
             student.day = DateTime.Today;//текущая дата
             Form2 f = new Form2(student);
+            f.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form6 f = new Form6(student);
             f.ShowDialog();
         }
     }

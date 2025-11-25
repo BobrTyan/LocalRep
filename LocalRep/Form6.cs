@@ -11,10 +11,16 @@ using System.Windows.Forms;
 namespace LocalRep
 {
     public partial class Form6 : Form
-    {
-        public Form6()
+    {   Student s = new Student();
+        public Form6(Student student)
         {
             InitializeComponent();
+            this.s = student;
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
