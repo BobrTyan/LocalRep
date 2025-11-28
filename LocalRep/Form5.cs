@@ -36,9 +36,10 @@ namespace LocalRep
             }
            //Application.Exit(); // закрыть приложение и все окна выгрузить
             this.Close();
+            this.Hide();
             Form1 f = new Form1();
             f.Show();
-            this.Hide();
+           
         }
     }
 }

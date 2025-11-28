@@ -32,10 +32,11 @@ namespace LocalRep
              else if ((checkBox1.Checked == true && checkBox2.Checked == false && checkBox3.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox3.Checked == false) || (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == true)) { s.ball = s.ball + 1; }
              else if ((checkBox1.Checked == true && checkBox2.Checked == true && checkBox3.Checked == false) || (checkBox1.Checked == true && checkBox2.Checked == false && checkBox3.Checked == true) || (checkBox1.Checked == false && checkBox2.Checked == true && checkBox3.Checked == true)) { s.ball = s.ball + 2; }
              else if (checkBox1.Checked == true && checkBox2.Checked == true && checkBox1.Checked == true) { s.ball = s.ball + 3; }*/
+           this.Hide();
             Form4 f = new Form4(s);
             f.ShowDialog();
-            this.Hide();
-            this.Visible = false;
+           
+        
 
         }
     }

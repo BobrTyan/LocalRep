@@ -30,10 +30,11 @@ namespace LocalRep
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        { 
+            this.Hide();
             Form6 f = new Form6(student);
             f.ShowDialog();
-            this.Hide();
+           
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
