@@ -24,6 +24,7 @@ namespace LocalRep
             if (radioButton1.Checked == true) { s.ball = s.ball + 1; }
             Form5 f = new Form5(s);
             f.ShowDialog();
+            this.Visible = false;
         }
     }
 }

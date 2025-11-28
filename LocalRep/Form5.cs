@@ -26,14 +26,19 @@ namespace LocalRep
         {
             using (StreamWriter writer = new StreamWriter("out.txt", true))
             {
+                
                 //запись в файл
                 writer.WriteLine(s.name);
                 writer.WriteLine(Convert.ToString(s.ball));
-                writer.WriteLine(Convert.ToString(s.day));
-                writer.WriteLine();
+                writer.WriteLine(Convert.ToString(s.day.ToShortDateString()));
+            //    writer.WriteLine();
                 writer.Close();
             }
-            Application.Exit(); // закрыть приложение и все окна выгрузить
+           //Application.Exit(); // закрыть приложение и все окна выгрузить
+            this.Close();
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
         }
     }
 }
